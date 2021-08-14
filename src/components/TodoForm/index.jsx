@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './styles.module.scss';
 
 const TodoForm = ({ onSave }) => {
   const [text, setText] = useState('');
@@ -16,10 +17,16 @@ const TodoForm = ({ onSave }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Todo:
-        <input value={text} type="text" name="todo" onChange={handleOnChange} />
+        <input
+          className={styles['todo-input']}
+          value={text}
+          type="text"
+          name="todo"
+          onChange={handleOnChange}
+          placeholder="Add new todo"
+        />
       </label>
-      <input type="submit" value="Add" />
+      <input className={styles['add-button']} type="submit" value="Add" />
     </form>
   );
 };

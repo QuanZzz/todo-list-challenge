@@ -1,0 +1,22 @@
+.todo-item {
+  display: flex;
+  background-color: gainsboro;
+  padding: 10px 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.remove-button {
+  background-color: #da3535;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

@@ -1,9 +1,15 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
 .app {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-
+.app-container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 50px;
+}
 .page-home {
   min-height: 100vh;
   padding: 25px;
@@ -30,5 +36,9 @@
 
 .code {
   font-family: 'Courier New', Courier, monospace;
-  background-color: rgba(255,255,255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+h5 {
+  margin-bottom: 0 !important;
 }

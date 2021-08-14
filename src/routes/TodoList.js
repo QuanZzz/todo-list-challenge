@@ -17,8 +17,8 @@ const Todo = () => {
   };
 
   return (
-    <div>
-      <h1>TODO List</h1>
+    <div className="app-container">
+      <h3>TODO List</h3>
       <TodoForm onSave={handleSaveTodo} />
       {todos.map((todo) => {
         return (
