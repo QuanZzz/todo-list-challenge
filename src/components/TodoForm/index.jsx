@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 const TodoForm = ({ onSave }) => {
   const [text, setText] = useState('');
 
-  const mySubmitHandler = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onSave(text);
+    setText('');
   };
 
   const handleOnChange = (event) => {
@@ -13,7 +14,7 @@ const TodoForm = ({ onSave }) => {
   };
 
   return (
-    <form onSubmit={mySubmitHandler}>
+    <form onSubmit={handleSubmit}>
       <label>
         Todo:
         <input value={text} type="text" name="todo" onChange={handleOnChange} />
