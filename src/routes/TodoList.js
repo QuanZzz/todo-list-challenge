@@ -11,14 +11,20 @@ const Todo = () => {
     setTodo([newTodo, ...todos]);
   };
 
+  const handleRemoveTodo = (todoId) => {
+    const restTodos = todos.filter((todo) => todo.id !== todoId);
+    setTodo(restTodos);
+  };
+
   return (
     <div>
       <h1>TODO List</h1>
       <TodoForm onSave={handleSaveTodo} />
       {todos.map((todo) => {
-        return <TodoItem key={todo.id} todo={todo} />;
+        return (
+          <TodoItem key={todo.id} todo={todo} onRemove={handleRemoveTodo} />
+        );
       })}
-      <ul></ul>
     </div>
   );
 };
